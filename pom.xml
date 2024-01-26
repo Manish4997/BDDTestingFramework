@@ -14,8 +14,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.build.timestamp.format>ddMMhhmm</maven.build.timestamp.format>
   </properties>
 
   <dependencies>
@@ -180,11 +181,11 @@
                         </goals>
                         <configuration>
                             <projectName>Test Result</projectName>
-                            <inputDirectory>${project.build.directory}/cucumberjson</inputDirectory>
+                            <inputDirectory>${project.basedir}/Results/cucumberjson</inputDirectory>
                             <jsonFiles>
                                 <param>**/*.json</param>
                             </jsonFiles>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <outputDirectory>${project.basedir}/Results/cucumber-report-html_${maven.build.timestamp}</outputDirectory>
                         </configuration>
                    </execution>
            </executions>
