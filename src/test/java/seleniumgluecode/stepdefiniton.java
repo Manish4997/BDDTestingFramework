@@ -21,7 +21,7 @@ import Utilities.ProjectConfiguration;
 public class stepdefiniton {
 	
 	 private WebDriver driver;
-	@Before
+	@Before("@tag")
 	public void setup() {
 		ChromeOptions chromeoptions=new ChromeOptions();
 		  chromeoptions.addArguments("--remote-allow-origins=*");
@@ -36,7 +36,7 @@ public class stepdefiniton {
 		   driver=new ChromeDriver(chromeoptions);
 		   driver.manage().window().maximize();
 	}
-	@After
+	@After("@tag")
 	public void logout() {
 		driver.quit();
 		

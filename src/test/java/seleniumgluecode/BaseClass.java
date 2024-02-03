@@ -7,7 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import Cucumber.ScenarioContext;
-import cucumber.api.Scenario;
+import io.cucumber.java.Scenario;
 
 public class BaseClass {
       private static Scenario scenario = null;
@@ -21,12 +21,12 @@ public class BaseClass {
 	
       public static void StepLog(String msg) {
     	 
-    	  scenario.write(msg+"\n");
+    	  scenario.log(msg +"\n");
     	  
       }
 	
       public static void CaptureScreenshot(WebDriver driver) {
-    	  scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "images/png");
+    	  scenario.attach(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "images/png","output");
       }
 	
 	
