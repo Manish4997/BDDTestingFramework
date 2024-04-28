@@ -2,50 +2,51 @@ package seleniumgluecode;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import webUtils.ActionUtils;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
+import PageUtils.OrangeHRMfunctions;
 import Utilities.ProjectConfiguration;
+import Utilities.ReportUtils;
+import base.TestBase;
 
-public class stepdefiniton {
+public class stepdefiniton extends TestBase{
 	
 	 private WebDriver driver;
+	 private OrangeHRMfunctions orangeHRMfunctions;
 	@Before
-	public void setup() {
-		ChromeOptions chromeoptions=new ChromeOptions();
-		  chromeoptions.addArguments("--remote-allow-origins=*");
-		  chromeoptions.addArguments("--disable-notifications");
-		  chromeoptions.addArguments("--disable-popup-blocking");
-		  chromeoptions.addArguments("--start-maximized");
-		  DesiredCapabilities SSLcertificate=new DesiredCapabilities();
-		  SSLcertificate.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-		  SSLcertificate.setCapability(ChromeOptions.CAPABILITY, chromeoptions);
-		  chromeoptions.merge(SSLcertificate);
-		   WebDriverManager.chromedriver().setup();
-		   driver=new ChromeDriver(chromeoptions);
-		   driver.manage().window().maximize();
+	public void setup(Scenario scenario) {
+		ReportUtils.setScenario(scenario);
+		StartWebDriver();
+		driver=getDriver();
+		orangeHRMfunctions= new OrangeHRMfunctions(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(ProjectConfiguration.LoadProperties("implicitwaitTime"))));
+		driver.manage().window().maximize();
+		
 	}
 	@After
 	public void logout() {
-		driver.quit();
-		
+//		if(driver!=null) {
+//		driver.quit();
+//		}
 	}
 	
 	@Given("User navigates to the webpage using the web url")
 	public void user_navigates_to_the_webpage_using_the_web_url() throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
 		driver.get(ProjectConfiguration.LoadProperties("base_url"));
+		ActionUtils.ActionWait(10);
+		ReportUtils.StepLog("Navigating to to OrangeHRM portal");
+		ReportUtils.CaptureScreenshot(driver,"Navigating to to OrangeHRM portal" );
 		
 	}
 
@@ -54,12 +55,15 @@ public class stepdefiniton {
 	    // Write code here that turns the phrase above into concrete actions
 	    String s=driver.getTitle();
 	    System.out.println(s);
+		ReportUtils.StepLog("Title of the Page " +s);
 	}
-
-	@Then("User validates the title of the page")
-	public void user_validates_the_title_of_the_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    Assert.assertTrue("It is not navigated to the correct page",!driver.getTitle().isEmpty());
+   
+	@Then("User logins into OrangeHRM with {string} and {string}")
+	public void user_logins_into_orange_hrm_with_and(String UserName, String Password) {
+		ReportUtils.StepLog("Logging in to OrangeHRM portal");
+		UserName=ProjectConfiguration.LoadProperties(UserName);
+		Password=ProjectConfiguration.LoadProperties(Password);
+	    orangeHRMfunctions.user_logins_to_OrangeHRM(UserName, Password);
 	    
 	    
 	}

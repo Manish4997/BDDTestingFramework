@@ -1,71 +1,103 @@
 package Utilities;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 import java.io.File;
 
-
-import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.junit.Assert;
 
 public class ExcelUtilities {
-	 private static String DataSheetName=ProjectConfiguration.LoadProperties("DataSheet");
-	    private static String ExcelSheetName=ProjectConfiguration.LoadProperties("ExcelSheetName");
-		private static String ExcelFilePath=System.getProperty("user.dir")+"/testData/"+ExcelSheetName;
-	    private static HashMap<String,String> ExcelData;
-	    
-		public static String get(String testcasename,String columnname) {
-			FileInputStream file;
-			int x=0;
-			int k=0;
-			ExcelData=new HashMap<String,String>();
+
+	private static String ExcelSheetName = ProjectConfiguration.LoadProperties("ExcelSheetName");
+	private static String ExcelFilePath = System.getProperty("user.dir") + "/testData/" + ExcelSheetName;
+	private static Map<String, String> testDataMap;
+	private static XSSFWorkbook testDataWorkBook;
+
+	public static void loadExcelTestDataWorkBook() {
+		if (testDataWorkBook == null) {
 			try {
-				file=new FileInputStream(new File(ExcelFilePath));
-				
-				@SuppressWarnings("resource")
-				XSSFWorkbook wb=new XSSFWorkbook(file);
-				XSSFSheet sh=wb.getSheet(DataSheetName);
-				
-				for(int i=0;i<sh.getPhysicalNumberOfRows();i++) {
-					for(int j=0;j<sh.getRow(i).getPhysicalNumberOfCells();j++) {
-					     if(sh.getRow(i).getCell(j,MissingCellPolicy.CREATE_NULL_AS_BLANK).toString().replace(".0", "").equalsIgnoreCase("Keyword")) {
-					    	 x=j;
-					     }
-					     if(sh.getRow(i).getCell(j,MissingCellPolicy.CREATE_NULL_AS_BLANK).toString().replace(".0", "").equalsIgnoreCase("Keyword")) {
-					    	 k=j;
-					     }
-					     if(sh.getRow(i).getCell(j,MissingCellPolicy.CREATE_NULL_AS_BLANK).toString().replace(".0", "").equalsIgnoreCase("testcasename")) {
-					    	 ExcelData.put(sh.getRow(i).getCell(x,MissingCellPolicy.CREATE_NULL_AS_BLANK).toString().replace(".0", ""), 
-					    			 sh.getRow(i).getCell(k,MissingCellPolicy.CREATE_NULL_AS_BLANK).toString().replace(".0", ""));
-					    	 
-					     }
-					}
-					
-					
-				}
-					
-			}
-			catch(Exception e) {
+				FileInputStream fis = new FileInputStream(new File(ExcelFilePath));
+				testDataWorkBook = new XSSFWorkbook(fis);
+
+			} catch (FileNotFoundException e) {
+				Assert.fail("No Test Data excel sheet found at location : " + ExcelFilePath);
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			
-			return ExcelData.get(testcasename); 
-			
-			
-			
-			
+
 		}
-			
-			
-		public static void main(String[] args) {		
-			
-			
-			
-			
-			
-			
-			
-			
+	}
+
+	private static String getCellValue(XSSFCell cell) {
+		try {
+			switch (cell.getCellType()) {
+
+			case STRING:
+				return cell.getStringCellValue();
+			case NUMERIC:
+				return Double.toString(cell.getNumericCellValue());
+			case BOOLEAN:
+				return String.valueOf(cell.getBooleanCellValue());
+			default:
+				break;
+
+			}
+		} catch (Exception e) {
+			return "";
 		}
+		return "";
+	}
+
+	public static int getScenarioColName(String ScenarioName, XSSFSheet sheet) {
+		XSSFRow scNameRow = sheet.getRow(0);
+		int colNo = scNameRow.getPhysicalNumberOfCells();
+		for (int colNum = 1; colNum <= colNo; colNum++) {
+			XSSFCell cell = scNameRow.getCell(colNum);
+			String cellvalue = getCellValue(cell);
+			if (cellvalue != null && !cellvalue.isBlank() && cellvalue.equalsIgnoreCase(ScenarioName)) {
+				return colNo;
+			}
+		}
+		return -1;
+
+	}
+
+	public static Map<String, String> getDataforScenario(String ScenarioName) {
+		testDataMap = new HashMap<String, String>();
+		try {
+			if (testDataWorkBook == null) {
+				loadExcelTestDataWorkBook();
+			} else {
+				System.out.println("WorkBook is already in memory");
+			}
+			if (ScenarioName != null) {
+				XSSFSheet sheet = testDataWorkBook.getSheet(ScenarioName.split(",")[0].trim());
+				int reqCol = getScenarioColName(ScenarioName.split(",")[1].trim(), sheet);
+				System.out.println(reqCol);
+				if (reqCol > 0) {
+					testDataMap.put("ScenarioName", ScenarioName.split(",")[1].trim());
+					int numRows = sheet.getPhysicalNumberOfRows();
+					for (int row = 1; row < numRows; row++) {
+						
+						testDataMap.put(getCellValue(sheet.getRow(row).getCell(0)),
+								getCellValue(sheet.getRow(row).getCell(reqCol-1)));
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return testDataMap;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(getDataforScenario("OrangeHRM,OrangeHrm_Scenario"));
+	}
 }
