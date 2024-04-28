@@ -28,7 +28,7 @@ public class TestBase extends DriverManager {
 		options.addArguments("--disable-popup-blocking");
 		options.addArguments("--start-maximized");
 		options.addArguments("--ignore-certificate-errors");
-		options.setExperimentalOption("useAutomationExtension", false);
+		options.setExperimentalOption("useAutomationExtension", false);  
 		options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 		options.setAcceptInsecureCerts(true);
 
