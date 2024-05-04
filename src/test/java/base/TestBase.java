@@ -3,16 +3,20 @@ package base;
 import java.util.Collections;
 import java.util.HashMap;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class TestBase extends DriverManager {
-	BrowserName browser = BrowserName.CHROME;
+import webUtils.JavascrpitUtils;
 
+public class TestBase extends DriverManager {
+	
+	private static final Logger LOGGER=LogManager.getLogger(TestBase.class);
 	public void StartWebDriver() {
-		System.out.println("Executing test on " + browser.toString() + " browser");
-		setupBrowser(browser);
+		LOGGER.info("Starting the Execution on browser"+DriverManager.getBrowser());
+		setupBrowser(DriverManager.getBrowser());
 	}
 
 	protected WebDriver createchromedriver(BrowserName browser) {
@@ -33,8 +37,10 @@ public class TestBase extends DriverManager {
 		options.setAcceptInsecureCerts(true);
 
 		try {
+			LOGGER.info("Initializing the Chrome Browser session");
 			driver = new ChromeDriver(options);
 		} catch (Exception e) {
+			LOGGER.error("Unable to initialise browser");
 			System.err.println("Unable to initialise browser");
 			e.printStackTrace();
 		}

@@ -1,7 +1,7 @@
 @tag
 Feature: Selenium Web Application Sceanrios
 
-  @tag1
+  @tag1 @parallel
   Scenario: Validate the Title of a WebPage
     Given User navigates to the webpage using the web url
     When User navigates to the Home page

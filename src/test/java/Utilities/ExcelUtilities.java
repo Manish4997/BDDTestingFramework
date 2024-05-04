@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.io.File;
 
@@ -95,6 +96,29 @@ public class ExcelUtilities {
 			e.printStackTrace();
 		}
 		return testDataMap;
+	}
+	public static void writeDatainOneRowforpopulation(String sheetname,String scenarioRow, List<String> data)
+	{
+		try {
+			if (testDataWorkBook == null) {
+				loadExcelTestDataWorkBook();
+			} else {
+				System.out.println("WorkBook is already in memory");
+			}
+			XSSFSheet sheet = testDataWorkBook.getSheet(sheetname);
+		    int rowNumber=0;
+		    for(int i=0;i<sheet.getPhysicalNumberOfRows();i++) {
+		    	if(sheet.getRow(i).getCell(0).toString().equalsIgnoreCase(scenarioRow)) {
+		    		for(int j=0;j<data.size();j++) {
+		    			sheet.getRow(i).createCell(j+1).setCellValue(data.get(j).toString());
+		    		}
+		    	break;
+		    	}
+		    }
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args) {

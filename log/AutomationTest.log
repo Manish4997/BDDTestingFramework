@@ -1,0 +1,164 @@
+[INFO ] 2024-05-04 16:45:16.284 [main] stepdefiniton - Staring the test Execution for scenario Validate the Title of a WebPage
+[INFO ] 2024-05-04 16:45:16.304 [main] TestBase - Starting the Execution on browserCHROME
+[INFO ] 2024-05-04 16:45:16.323 [main] TestBase - Initializing the Chrome Browser session
+[INFO ] 2024-05-04 16:45:25.634 [main] ActionUtils - Waiting for 10 seconds
+[INFO ] 2024-05-04 16:45:35.977 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:45:38.061 [main] ActionUtils - Waiting for 1 seconds
+[INFO ] 2024-05-04 16:45:39.068 [main] ActionUtils - Entering values in the text box
+[INFO ] 2024-05-04 16:45:39.410 [main] ActionUtils - Waiting for 1 seconds
+[INFO ] 2024-05-04 16:45:40.420 [main] ActionUtils - Entering values in the text box
+[INFO ] 2024-05-04 16:45:40.910 [main] ActionUtils - Waiting for 1 seconds
+[INFO ] 2024-05-04 16:45:41.912 [main] ActionUtils - Clicking on the WebElement
+[INFO ] 2024-05-04 16:45:43.367 [main] ActionUtils - Waiting for 5 seconds
+[INFO ] 2024-05-04 16:45:48.406 [main] stepdefiniton - Staring the test Execution for scenario User reads data from the graph from World Population site and stores it in Excel
+[INFO ] 2024-05-04 16:45:48.407 [main] TestBase - Starting the Execution on browserCHROME
+[INFO ] 2024-05-04 16:45:48.407 [main] TestBase - Initializing the Chrome Browser session
+[INFO ] 2024-05-04 16:45:52.999 [main] ActionUtils - Waiting for 10 seconds
+[INFO ] 2024-05-04 16:46:03.373 [main] ActionUtils - Waiting for 5 seconds
+[INFO ] 2024-05-04 16:46:08.382 [main] JavascrpitUtils - Scrolling to the element
+[INFO ] 2024-05-04 16:46:08.517 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:10.628 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:11.383 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:13.469 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:14.170 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:16.234 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:16.872 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:18.956 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:19.606 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:21.676 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:22.355 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:24.441 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:25.078 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:27.150 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:27.811 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:29.876 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:30.530 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:32.602 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:33.262 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:35.358 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:36.003 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:38.064 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:38.750 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:40.845 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:41.506 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:43.583 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:44.247 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:46.337 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:47.125 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:49.219 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:49.941 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:52.008 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:52.746 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:54.841 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:55.528 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:46:57.607 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:46:58.279 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:00.356 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:01.208 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:03.306 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:04.139 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:06.272 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:06.867 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:09.026 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:09.638 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:11.777 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:12.414 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:14.482 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:15.121 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:17.254 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:18.124 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:20.193 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:21.023 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:23.149 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:23.764 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:25.828 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:26.463 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:28.527 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:29.152 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:31.257 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:31.851 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:33.935 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:34.685 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:36.772 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:37.397 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:39.484 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:40.140 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:42.224 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:42.864 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:44.935 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:45.631 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:47.694 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:48.269 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:50.354 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:51.025 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:53.091 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:53.657 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:55.730 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:56.356 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:47:58.421 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:47:59.036 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:01.097 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:01.750 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:03.823 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:04.454 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:06.529 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:07.167 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:09.244 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:09.882 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:11.963 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:12.722 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:14.784 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:15.389 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:17.458 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:18.065 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:20.143 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:20.780 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:22.857 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:23.502 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:25.591 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:26.773 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:28.832 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:29.445 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:31.528 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:32.099 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:34.167 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:34.848 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:36.936 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:37.604 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:39.682 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:40.326 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:42.387 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:43.043 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:45.161 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:46.012 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:48.096 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:48.767 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:50.818 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:51.435 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:53.505 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:54.534 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:56.612 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:57.261 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:48:59.388 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:48:59.959 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:02.057 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:02.612 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:04.717 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:05.335 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:07.396 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:08.162 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:10.227 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:10.862 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:12.929 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:13.842 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:15.950 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:16.691 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:18.770 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:19.448 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:21.521 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:22.149 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:24.251 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:24.917 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:26.994 [main] ActionUtils - Hovering mouse over the element
+[INFO ] 2024-05-04 16:49:27.629 [main] ActionUtils - Waiting for 2 seconds
+[INFO ] 2024-05-04 16:49:32.513 [main] ReportUtils - Generation the Cucumber HTML Report for the Test Execution

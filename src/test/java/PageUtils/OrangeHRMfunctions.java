@@ -17,7 +17,7 @@ public class OrangeHRMfunctions extends ReportUtils {
 	public OrangeHRMfunctions(WebDriver driver) {
 		OrangeHRMfunctions.driver=driver;
 	    orangeHrmcontainers= PageFactory.initElements(driver, OrangeHRMcontainers.class);
-	    jsUtils=new JavascrpitUtils();
+	    jsUtils=PageFactory.initElements(driver, JavascrpitUtils.class);
 	}
 	
 	public void user_logins_to_OrangeHRM(String UserName, String Password) {
